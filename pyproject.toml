@@ -1,0 +1,28 @@
+[tool]
+[tool.pdm]
+
+[project]
+name = "dialer"
+version = "0.0.1"
+description = ""
+authors = [
+    {name = "Hai Binh Do", email = "binhdoitsme@gmail.com"},
+]
+dependencies = [
+    "pytest>=7.3.1",
+]
+requires-python = ">=3.9"
+license = {text = "MIT"}
+
+[project.scripts]
+dialer = "dialer.main:main"
+
+[pytest]
+pythonpath = "src"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.pdm.scripts]
+start = "dialer"
+test = "pytest"
